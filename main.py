@@ -1,13 +1,4 @@
-# Scissors cut Paper
-# Paper covers Rock
-# Rock crushes Lizard
-# Lizard poisons Spock
-# Spock smashes Scissors
-# Scissors decapitate Lizard
-# Lizard eats Paper
-# Paper disproves Spock
-# Spock vaporizes Rock
-# Rock crushes Scissors
+import random
 
 # Scissors cut Paper
 # Paper covers Rock
@@ -28,16 +19,6 @@
 # 3 Lizard	 -1	   1	-1	    0	    1
 # 4 Spock	  1	  -1	 1	   -1	    0
 
-
-
-#            0     1      2       3      4
-# 	       Rock	Paper Scissors Lizard Spock
-# 0 Rock      0	  -1	 -2      -3	   -4
-# 1 Paper	  1	   0	 -1	     -2    -3
-# 2 Scissors  2	   1	  0	     -1	   -2
-# 3 Lizard	  3	   2	  1	      0	   -1
-# 4 Spock	  4	   3	  2	      1	    0
-
 WIN = 1
 TIE = 0
 LOSE = -1
@@ -47,18 +28,9 @@ scissors = 2
 lizard = 3
 spock = 4
 
-# rock = 0
-# paper = 1
-# scissors = 2
-# player1 wins on -2, 1, 1
-# player2 wins on -1, -1, 2
+
 def determine_winner(player1, player2):
-    # Define the numerical outcomes
-
-
-    # Options
-
-
+ 
     # Create a nested list for the truth table
     truth_table = [
         [TIE, LOSE, WIN, WIN, LOSE],
@@ -71,14 +43,8 @@ def determine_winner(player1, player2):
     outcome = truth_table[player1][player2]
     return outcome
 
-# rock beats scissors
-# paper beats Rock
-# scissor beats paper
-
-import random
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
     # key, value pairs for determining winner and labeling
@@ -103,6 +69,7 @@ if __name__ == '__main__':
     }
 
     # code block used to get computer and user moves
+    
     computer_move = random.randint(0, 4)
     user_input = input("Rock, Paper, Scissors, Lizard, Spock\n")
     user_move = -1
@@ -124,4 +91,3 @@ if __name__ == '__main__':
         print("You Lost!")
 
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
